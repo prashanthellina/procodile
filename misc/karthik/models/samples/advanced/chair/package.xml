@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package title="chair" version="1">
+    <description/>
+    <generators>
+        <generator id="chair.Chair">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="width" value="(0.29999999999999999, 1.0)"/>
+                <param name="leg_height" value="(0.10000000000000001, 1)"/>
+                <param name="leg_thickness" value="(0.01, 0.10000000000000001)"/>
+                <param name="back_rest_height" value="(0.0, 1.0)"/>
+                <param name="back_rest_thickness" value="(0.02, 0.10000000000000001)"/>
+                <param name="base_length" value="(0.40000000000000002, 0.69999999999999996)"/>
+                <param name="base_thickness" value="(0.02, 0.10000000000000001)"/>
+                <param name="leg_type" value="['square', 'round', 'triangular']"/>
+                <param name="leg_placement_offset" value="(0.80000000000000004, 1)"/>
+            </config>
+            <sub_generator id="chair_base.RoundBase"/>
+            <sub_generator id="chair_leg.ChairLeg"/>
+            <sub_generator id="chair_backrest.BarBackRest"/>
+            <sub_generator id="chair_base.FlowerBase"/>
+            <sub_generator id="chair_base.ChairBase"/>
+            <sub_generator id="chair_leg.CylispheLeg"/>
+            <sub_generator id="chair_backrest.ChairBackRest"/>
+        </generator>
+        <generator id="chair_backrest.ChairBackRest">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="width" value="(0.29999999999999999, 1.0)"/>
+                <param name="back_rest_thickness" value="(0.02, 0.10000000000000001)"/>
+                <param name="back_rest_height" value="(0.0, 1.0)"/>
+            </config>
+        </generator>
+        <generator id="chair_backrest.BarBackRest">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <parent id="chair_backrest.ChairBackRest"/>
+            <config>
+                <param name="width" value="(0.29999999999999999, 1.0)"/>
+                <param name="back_rest_thickness" value="(0.02, 0.10000000000000001)"/>
+                <param name="back_rest_height" value="(0.0, 1.0)"/>
+                <param name="no_of_holes" value="(5, 20)"/>
+            </config>
+        </generator>
+        <generator id="chair_base.RoundBase">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <parent id="chair_base.ChairBase"/>
+            <config>
+                <param name="width" value="(0.29999999999999999, 1.0)"/>
+                <param name="base_length" value="(0.20000000000000001, 4)"/>
+                <param name="base_thickness" value="(0.02, 0.10000000000000001)"/>
+            </config>
+        </generator>
+        <generator id="chair_base.FlowerBase">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <parent id="chair_base.ChairBase"/>
+            <config>
+                <param name="width" value="(0.29999999999999999, 1.0)"/>
+                <param name="base_length" value="(0.20000000000000001, 4)"/>
+                <param name="base_thickness" value="(0.02, 0.10000000000000001)"/>
+                <param name="cover_area" value="(0.02, 0.10000000000000001)"/>
+            </config>
+        </generator>
+        <generator id="chair_base.ChairBase">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="width" value="(0.29999999999999999, 1.0)"/>
+                <param name="base_length" value="(0.20000000000000001, 4)"/>
+                <param name="base_thickness" value="(0.02, 0.10000000000000001)"/>
+            </config>
+        </generator>
+        <generator id="chair_leg.CylispheLeg">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <parent id="chair_leg.ChairLeg"/>
+            <config>
+                <param name="leg_height" value="(0.10000000000000001, 1)"/>
+                <param name="leg_thickness" value="(0.01, 0.10000000000000001)"/>
+            </config>
+            <sub_generator id="chair_leg.ChairLeg"/>
+        </generator>
+        <generator id="chair_leg.ChairLeg">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="leg_height" value="(0.10000000000000001, 1)"/>
+                <param name="leg_thickness" value="(0.01, 0.10000000000000001)"/>
+                <param name="type" value="['square', 'cylinder', 'triangular']"/>
+            </config>
+        </generator>
+    </generators>
+</package>

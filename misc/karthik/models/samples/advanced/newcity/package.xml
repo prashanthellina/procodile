@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package title="newcity" version="None">
+    <description/>
+    <generators>
+        <generator id="building.Base">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="length" value="(50, 100)"/>
+                <param name="width" value="(2, 10)"/>
+                <param name="pavement" value="(0, 14)"/>
+            </config>
+            <sub_generator id="building.Pavement"/>
+        </generator>
+        <generator id="building.CurvedBlock">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="length" value="(20, 40)"/>
+                <param name="width" value="(20, 40)"/>
+                <param name="height" value="(10, 500)"/>
+                <param name="pavement" value="(0, 14)"/>
+            </config>
+        </generator>
+        <generator id="building.Generator">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="length" value="(20, 40)"/>
+                <param name="width" value="(20, 40)"/>
+                <param name="height" value="(10, 500)"/>
+            </config>
+        </generator>
+        <generator id="building.LBuildings">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="total_length" value="(80, 150)"/>
+                <param name="total_width" value="(40, 80)"/>
+                <param name="length" value="(40, 80)"/>
+                <param name="width" value="(20, 40)"/>
+                <param name="height" value="(10, 50)"/>
+                <param name="num_blocks" value="(2, 6)"/>
+                <param name="blocks" value="[['FL', 'FM', 'FR', 'BL', 'BM', 'BR']]"/>
+            </config>
+            <sub_generator id="building.Park"/>
+            <sub_generator id="building.Block"/>
+        </generator>
+        <generator id="building.Pavement">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="length" value="(50, 100)"/>
+                <param name="width" value="(2, 10)"/>
+                <param name="pavement" value="(0, 14)"/>
+            </config>
+        </generator>
+        <generator id="building.Park">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="length" value="(80, 150)"/>
+                <param name="width" value="(40, 80)"/>
+                <param name="height" value="(0.20000000000000001, 2)"/>
+                <param name="right_open" value="[True, False]"/>
+                <param name="left_open" value="[True, False]"/>
+                <param name="park_style" value="['line_park', 'middle_tree', 'block_park']"/>
+                <param name="pavement" value="(0, 9)"/>
+            </config>
+            <sub_generator id="building.CurvedBlock"/>
+            <sub_generator id="tree.Tree"/>
+        </generator>
+        <generator id="building.Block">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="length" value="(40, 80)"/>
+                <param name="width" value="(20, 40)"/>
+                <param name="height" value="(10, 50)"/>
+                <param name="terrace" value="(0, 4)"/>
+                <param name="facade" value="(0, 9)"/>
+            </config>
+        </generator>
+        <generator id="building.Test">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="length" value="(50, 100)"/>
+                <param name="width" value="(50, 100)"/>
+                <param name="pavement" value="(0, 14)"/>
+            </config>
+            <sub_generator id="building.Pavement"/>
+        </generator>
+        <generator id="celllayout.Layout">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="level" value="[1, 2, 3, 4]"/>
+                <param name="length" value="(1000, 5000)"/>
+                <param name="width" value="(1000, 5000)"/>
+                <param name="plot_length" value="None"/>
+                <param name="plot_width" value="(20, 40)"/>
+                <param name="road_width" value="(5, 10)"/>
+                <param name="height_range" value="None"/>
+                <param name="plot_gap" value="(5, 12)"/>
+            </config>
+            <sub_generator id="plot.RuralPlot"/>
+            <sub_generator id="road.SimpleRoad"/>
+        </generator>
+        <generator id="city.CellularAutomataCity">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="size" value="(500, 500)"/>
+                <param name="cell_size" value="100"/>
+                <param name="num_villages" value="(1, 10)"/>
+                <param name="num_forests" value="(1, 10)"/>
+                <param name="forests_percentage" value="(0.01, 0.10000000000000001)"/>
+                <param name="num_waters" value="(1, 10)"/>
+                <param name="waters_percentage" value="(0.01, 0.10000000000000001)"/>
+                <param name="level_percentages" value="[(0.050000000000000003, 0.20000000000000001, 0.29999999999999999, 0.45000000000000001)]"/>
+                <param name="habitable_zone_percentages" value="[(1.0, 0.0, 0.0)]"/>
+                <param name="layout_max_cells" value="[(25, 50, 100, 400)]"/>
+                <param name="layout_max_elongation_ratio" value="(2.0, 6.0)"/>
+            </config>
+            <sub_generator id="sector.Sector"/>
+            <sub_generator id="road.MainRoad"/>
+        </generator>
+        <generator id="plot.RuralPlot">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="length" value="(1000, 5000)"/>
+                <param name="width" value="(1000, 5000)"/>
+                <param name="build_height_range" value="None"/>
+            </config>
+            <sub_generator id="building.LBuildings"/>
+            <sub_generator id="building.Base"/>
+            <sub_generator id="tree.Tree"/>
+        </generator>
+        <generator id="road.Junction">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="length" value="(50, 100)"/>
+                <param name="width" value="(2, 10)"/>
+            </config>
+        </generator>
+        <generator id="road.SimpleRoad">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="length" value="(100, 500)"/>
+                <param name="width" value="(1, 4)"/>
+                <param name="lanes" value="(1, 6)"/>
+                <param name="divider_width" value="(0.10000000000000001, 0.5)"/>
+            </config>
+            <sub_generator id="road.Divider"/>
+        </generator>
+        <generator id="road.MainRoad">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="length" value="(100, 500)"/>
+                <param name="width" value="(1, 4)"/>
+                <param name="lanes" value="(1, 6)"/>
+                <param name="divider_width" value="(0.10000000000000001, 0.5)"/>
+            </config>
+            <sub_generator id="road.Divider"/>
+        </generator>
+        <generator id="road.Divider">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="length" value="(100, 500)"/>
+                <param name="width" value="(1, 4)"/>
+                <param name="height" value="(0.40000000000000002, 1.5)"/>
+            </config>
+        </generator>
+        <generator id="sector.Sector">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="length" value="(25, 50)"/>
+                <param name="width" value="(25, 50)"/>
+                <param name="num_roads" value="(2, 2)"/>
+                <param name="road_width" value="(5, 15)"/>
+                <param name="min_gap_btw_roads" value="(8, 10)"/>
+                <param name="height_range" value="[(0.10000000000000001, 0), (0.59999999999999998, (3, 15)), (0.25, (15, 50)), (0.050000000000000003, (50, 100)), (0.0, (100, 200))]"/>
+            </config>
+            <sub_generator id="sector.Sector"/>
+            <sub_generator id="plot.RuralPlot"/>
+            <sub_generator id="road.Junction"/>
+            <sub_generator id="road.SimpleRoad"/>
+        </generator>
+        <generator id="sector.SimpleCity">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="length" value="(500, 500)"/>
+                <param name="width" value="(500, 500)"/>
+            </config>
+            <sub_generator id="sector.Sector"/>
+            <sub_generator id="road.Junction"/>
+            <sub_generator id="road.SimpleRoad"/>
+        </generator>
+        <generator id="tree.Tree">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="diameter" value="(0.050000000000000003, 0.5)"/>
+                <param name="height" value="(0.5, 5)"/>
+                <param name="trunk_diameter" value="(0.10000000000000001, 0.5)"/>
+            </config>
+        </generator>
+        <generator id="tree.PineTree">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="height" value="(0.5, 5)"/>
+                <param name="width" value="(0.29999999999999999, 2)"/>
+                <param name="top_ratio" value="(0.59999999999999998, 0.90000000000000002)"/>
+                <param name="trunk_ratio" value="(0.10000000000000001, 0.40000000000000002)"/>
+                <param name="trunk_diameter" value="(0.050000000000000003, 0.5)"/>
+            </config>
+        </generator>
+    </generators>
+</package>

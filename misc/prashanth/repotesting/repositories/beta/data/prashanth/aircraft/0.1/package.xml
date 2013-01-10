@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package version="0.1" title="aircraft">
+    <description>
+        Aircraft library
+    </description>
+    <generators>
+        <generator id="aircraft.Generator">
+            <model id="aircraft.Model"/>
+            <config>
+                <param name="length" value="Range(1000, 5000)"/>
+                <param name="height" value="Range(1000, 5000)"/>
+            </config>
+            <sub_generator id="engine.Generator"/>
+        </generator>
+        <generator id="engine.Generator">
+            <model id="engine.Model"/>
+            <config>
+                <param name="length" value="Range(1000, 5000)"/>
+                <param name="weight" value="Range(1000, 5000)"/>
+            </config>
+        </generator>
+    </generators>
+    <models>
+        <model id="aircraft.Model"/>
+        <model id="engine.Model"/>
+    </models>
+</package>

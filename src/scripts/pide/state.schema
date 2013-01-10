@@ -1,0 +1,34 @@
+
+CREATE TABLE IF NOT EXISTS generators
+(
+    time INTEGER NOT NULL,
+    count INTEGER NOT NULL DEFAULT 0,
+    location TEXT NOT NULL,
+    id TEXT NOT NULL,
+    version TEXT,
+
+    PRIMARY KEY (location, id, version)
+
+);
+
+CREATE INDEX IF NOT EXISTS generators_time ON generators (time);
+CREATE INDEX IF NOT EXISTS generators_count ON generators (count);
+
+CREATE TABLE IF NOT EXISTS settings
+(
+    key TEXT NOT NULL PRIMARY KEY,
+    value TEXT
+);
+
+CREATE TABLE IF NOT EXISTS autocomplete
+(
+    time INTEGER NOT NULL,
+    count INTEGER NOT NULL,
+        key TEXT NOT NULL,
+    value TEXT NOT NULL,
+
+    PRIMARY KEY (key, value)
+);
+
+CREATE INDEX IF NOT EXISTS autocomplete_time ON autocomplete (time);
+CREATE INDEX IF NOT EXISTS autocomplete_count ON autocomplete (count);

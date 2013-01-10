@@ -1,0 +1,56 @@
+material Skyboxes/Turbulent
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+
+			texture_unit
+			{
+				cubic_texture turbulent.jpg separateUV
+				tex_address_mode clamp
+			}
+		}
+	}
+}
+
+material Skyboxes/MountainRing
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+
+			texture_unit
+			{
+				cubic_texture mountain_ring.png separateUV
+				tex_address_mode clamp
+			}
+		}
+	}
+}
+
+material Grid
+{
+   receive_shadows on
+
+   technique
+   {
+      pass
+       {
+         scene_blend alpha_blend
+		 lighting off
+
+         texture_unit
+         {
+           texture grid.png
+           scale 0.001 0.001
+           filtering anisotropic
+         }
+      }
+   }
+}

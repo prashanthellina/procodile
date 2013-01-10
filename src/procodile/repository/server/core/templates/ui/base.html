@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" href="/static/media/core/css/block.screen.css"  type="text/css" media="screen,projection,print,tv"/>
+        <link rel="stylesheet" href="/static/media/core/css/standard.screen.css"  type="text/css" media="screen,projection,print,tv"/>
+        <link rel="stylesheet" href="/static/media/core/css/generator.screen.css"  type="text/css" media="screen,projection,print,tv"/>
+        <link rel="stylesheet" href="/static/media/core/css/registration.css"  type="text/css" media="screen,projection,print,tv"/>
+        <title> Procodile: everything procedural</title>
+        <style type="text/css">
+            /* menu */
+            #menu{ margin:0px; padding:0px; list-style:none; color:#fff; line-height:40px; display:inline-block; float:left; z-index:1000; }
+            #menu a { color:#000000; font-weight: bold; text-decoration:none; }
+            #menu > li {cursor:pointer; float:left; position:relative;padding:0px 10px;}
+            #menu > li a:hover {color:#B0D730;}
+            #menu .logo {background:transparent none repeat scroll 0% 0%; padding:0px; background-color:Transparent;}
+            /* sub-menus*/
+            #menu ul { padding:0px; margin:0px; display:block; display:inline;}
+            #menu li ul { position:absolute; left:-10px; top:0px; margin-top:40px; width:150px; line-height:16px; background-color:#B2D281; color:#0395CC; /* for IE */ display:none; z-index:100;}
+            #menu li:hover ul { display:block;}
+            #menu li ul li{ display:block; margin:5px 20px; padding: 5px 0px;  border-top: dotted 1px #606060; list-style-type:none; }
+            #menu li ul li:first-child { border-top: none; }
+            #menu li ul li a { display:block; color:#0395CC; }
+            #menu li ul li a:hover { color:#7FCDFE; }
+            /* main submenu */
+            #menu #main { left:0px; top:-20px; padding-top:20px; background-color:#7cb7e3; color:#fff; z-index:999;}
+            /* search */
+            .searchContainer div { background-color:#fff; display:inline; padding:5px;}
+            .searchContainer input[type="text"] {border:none;}
+            .searchContainer img { vertical-align:middle;}
+            /* corners*/
+            #menu .corner_inset_left { position:absolute; top:0px; left:-12px;}
+            #menu .corner_inset_right { position:absolute; top:0px; left:150px;}
+            #menu .last { background:transparent none repeat scroll 0% 0%; margin:0px; padding:0px; border:none; position:relative; border:none; height:0px;}
+            #menu .first { margin-left:40px; }
+            #menu .corner_left { position:absolute; left:0px; top:0px;}
+            #menu .corner_right { position:absolute; left:132px; top:0px;}
+            #menu .middle { position:absolute; left:18px; height: 20px; width: 115px; top:0px;}
+
+            #categories{ margin:0px; padding:0px; list-style:none; color:#fff; line-height:40px; display:inline-block; float:left; z-index:1000; background:transparent url(/static/media/core/images/main/menu-secondary.gif) no-repeat scroll 0 100%;}
+            #categories a { color:#000000;  font-weight: bold; text-decoration:none; }
+            #categories > li {cursor:pointer; float:left; position:relative;padding:0px 10px;}
+            #categories > li a:hover {color:#B0D730;}
+            #categories .logo {background:transparent none repeat scroll 0% 0%; padding:0px; background-color:Transparent;}
+            /* sub-menus*/
+            #categories ul { padding:0px; margin:0px; display:block; display:inline; }
+            #categories li ul { position:absolute; left:-10px; top:0px; margin-top:40px; width:150px; line-height:16px; background-color:#7AA13D; color:#0395CC; /* for IE */ display:none; z-index:100;}
+            #categories li:hover ul { display:block;}
+            #categories li ul li{ display:block; margin:5px 20px; padding: 5px 0px; border-top: dotted 1px #606060; list-style-type:none; }
+            #categories li ul li:first-child { border-top: none; }
+            #categories li ul li a { display:block; color:#000000;  font-weight: bold; }
+            #categories li ul li a:hover { color:#7FCDFE; }
+            /* main submenu */
+            #categories #main { left:0px; top:-20px; padding-top:20px; background-color:#7cb7e3; color:#fff; z-index:999;}
+            /* corners*/
+            #categories .corner_inset_left { position:absolute; top:0px; left:-12px;}
+            #categories .corner_inset_right { position:absolute; top:0px; left:150px;}
+            #categories .last { background:transparent none repeat scroll 0% 0%; margin:0px; padding:0px; border:none; position:relative; border:none; height:0px;}
+            #categories .first { margin-left:40px; }
+            #categories .corner_left { position:absolute; left:0px; top:0px;}
+            #categories .corner_right { position:absolute; left:132px; top:0px;}
+            #categories .middle { position:absolute; left:18px; height: 20px; width: 115px; top:0px;}
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="h-pri">
+                {% block main_menu %}
+                <div>
+                    <ul id="menu">
+
+                        <li class="first"><a href="http://procodile.vaspra.com/">Procodile</a>
+                        </li>
+
+                        <li><a href="#">About</a>
+                        </li>
+                    </ul>
+                </div>
+                <div style="float:right;">
+                    <ul id="menu">
+                        {% if avoid %}
+
+                        {% else %}
+                        {% if user.is_authenticated %}
+                        <li><a href="user/{{ user.username }}">{{ user.username }}</a>
+                        </li>
+                        <li><a href="/upload">Upload</a>
+                        </li>
+                        <li><a href="/logout">Logout</a>
+                        </li>
+                        {% else %}
+                        <li style="cursor:default;">
+                            <form action="/login" method="POST">
+                                Username: <input type="text" id="username" name="username"/>
+                                Password: <input type="password" id="password" name="password" />
+                                <input type="submit" value="Login" />
+                            </form>
+                        </li>
+                        <li><a style="text-decoration:underline;" href="/register">Sign up</a>
+                        </li>
+                        {% endif %}
+                        {% endif %}
+
+                        <li class="searchContainer">
+                            <div>
+                                <input type="text" id="searchField" value="Search Procodile..."/>
+                                <img src="/static/media/core/images/search.gif" alt="Search" onclick="alert('You clicked on search button')" /></div>
+                            <ul id="search">
+                                <li>
+                                    <img class="corner_inset_left" alt="" src="/static/media/core/images/menu/corner_inset_left.png"/>
+                                    <input id="cbxAll" type="checkbox" />All
+                                    <img class="corner_inset_right" alt="" src="/static/media/core/images/menu/corner_inset_right.png"/>
+                                </li>
+                                <li><input id="Articles" type="checkbox" />Articles</li>
+                                <li><input id="Tutorials" type="checkbox" />Tutorials</li>
+                                <li><input id="Reviews" type="checkbox" />Reviews</li>
+                                <li><input id="Resources" type="checkbox" />Resources</li>
+                                <li class="last">
+                                    <img class="corner_left" alt="" src="/static/media/core/images/menu/corner_left.png"/>
+                                    <img class="middle" alt="" src="/static/media/core/images/menu/dot.gif"/>
+                                    <img class="corner_right" alt="" src="/static/media/core/images/menu/corner_right.png"/>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                {% endblock main_menu %}
+            </div>
+
+            <div id="h-sec">
+                {% block categories %}
+                <ul id="categories">
+                    <li class="first">
+                        <a href="/generators"> All </a>
+                    </li>
+                    {% for cat, sub_cats in cats.items %}
+                    <li>
+                        <a href="/category/{{ cat.id }}/generators"> {{ cat.title }} </a>
+                        <ul>
+                            {% for sub_cat in sub_cats %}
+                            {% if forloop.first %}
+                            <li>
+                                <img class="corner_inset_left" alt="" src="/static/media/core/images/menu/corner_inset_left.png"/>
+                                <a href="/category/{{ sub_cat.id }}/generators">{{ sub_cat.title }}</a>
+                                <img class="corner_inset_right" alt="" src="/static/media/core/images/menu/corner_inset_right.png"/>
+                            </li>
+                            {% else %}
+                            <li>
+                                <a href="/category/{{ sub_cat.id }}/generators">{{ sub_cat.title }}</a>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                            <li class="last">
+                                <img class="corner_left" alt="" src="/static/media/core/images/menu/corner_left.png"/>
+                                <img class="middle" alt="" src="/static/media/core/images/menu/dot.gif"/>
+                                <img class="corner_right" alt="" src="/static/media/core/images/menu/corner_right.png"/>
+                            </li>
+                        </ul>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endblock categories %}
+            </div>
+
+            <div style="float:none; clear:both;"></div>
+            <br></br>
+            {% block content %}{% endblock %}
+            <div id="footer">
+                <div class="footer-contents"><div class="footer-contents2">
+                        <div class="col">
+                            <dl class="col-prime">
+                                <dt>Site Links</dt>
+                                <dd><a href="/">Home</a></dd>
+                                <dd><a href="/tour">Take a Tour</a></dd>
+                                <dd><a href="/search">Search Procodile</a></dd>
+
+                                <dd><a href="/about-rss">RSS Feeds</a></dd>
+                                <dd><a href="/archive">Popular Archive</a></dd>
+                            </dl>
+                        </div>
+                        <div class="col">
+                            <dl class="col-prime">
+                                <dt>Help</dt>
+                                <dd><a href="/faq">Frequent Questions</a></dd>
+                                <dd><a href="/how">How Procodile Works</a></dd>
+
+                                <dd><a href="/bugreport" class="menu-link">Report a Website Bug</a></dd>
+                            </dl>
+                        </div>
+                        <div class="col">
+                            <dl class="col-prime">
+                                <dt>All About Procodile</dt>
+                                <dd><a href="/about" style="margin-right: 0.6em;">About Us</a></dd>
+
+                                <dd><a href="/contact">Contact Us</a></dd>
+                                <dd><a href="/guidelines">Community Guidelines</a></dd>
+                                <dd><a href="http://blog.procodile.com">The Procodile Blog</a></dd>
+                                <dd><a href="/townhall">Procodile Townhalls</a> &amp; <a href="/meetup">Meetups</a></dd>
+
+                                <dd><a href="/advertise">Advertise on Procodile</a></dd>
+                            </dl>
+                        </div>
+                        <div class="col">
+                            <dl class="col-prime">
+                                <dt>Procodile Tools &amp; API</dt>
+                                <dd><a href="/tools/">All Procodile Tools</a></dd>
+                                <dd style="margin-top: 1em;"><a href="/tools">Procodile Tools</a></dd>
+
+                                <dd><a href="/twitter/">Twitter Feeds</a></dd>
+                                <dd><a href="http://www.google.com/ig/adde?moduleurl=http://procodile.com/goog/ig.xml&amp;source=dgfl">Add Procodile to Google</a></dd>
+                                <dd><a href="http://www.netvibes.com/subscribe.php?module=ProcodileOfficial">Netvibes Widget</a></dd>
+                                <dd><a href="/tools/integrate">Integrate Procodile Buttons</a></dd>
+                                <dd><a href="/tools/buttons">Procodile Badges</a></dd>
+
+                                <dd><a href="/add-procodile">Make a Procodile Widget</a></dd>
+                                <dd style="margin-top: 1em;"><a href="http://apidoc.procodile.com/">API for Developers</a></dd>
+                            </dl>
+                        </div>
+                        <div class="col">
+                            <dl class="col-prime">
+                                <dt>Procodile Dialogg!</dt>
+
+                                <dd><a href="/dialogg/">Procodile Dialogg</a> lets you choose the questions.</dd>
+                            </dl>
+                            <dl>
+                                <dt>Vaspra Labs</dt>
+                                <dd>Get a real-time view beneath the surface of Procodile.</dd>
+                                <dd><a href="http://labs.vaspra.com/">Vaspra Labs Home</a></dd>
+
+                            </dl>
+                        </div>
+
+
+
+                    </div></div> <!-- end .footer-contents, .footer-contents2 -->
+                <br style="clear: both;" />
+            </div> <!-- end #footer -->
+            <div class="copyright"><div>
+                    <img src="/static/media/core/images/logo.bmp" width="40" height="40" alt="" /> &copy; Procodile Inc. 2009
+                    &#8212; Content created and posted by Procodile users is <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">dedicated to the public domain</a> <span>|</span> <a href="/tos">Terms of Use</a> <em class="new" style="font-style: normal; margin-left: 0.5em;">Updated</em> <span>|</span> <a href="/privacy">Privacy Policy</a>
+
+                    <br />
+                    Procodile graphics, logos, designs, page headers, button icons, scripts, and other service names are the trademarks of Procodile Inc.<br/>
+                </div></div>
+
+
+            <div>
+                {% include "ui/debug.html" %}
+            </div>
+        </div>
+    </body>
+</html>

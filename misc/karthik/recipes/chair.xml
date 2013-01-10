@@ -1,0 +1,30 @@
+<recipe>
+    <description>A Flower Chair Recipe</description>
+
+    <generator name="chair" id="misc.karthik.models.chair.chair.Chair" root="1"/>
+    <generator name="simpleleg" id="misc.karthik.models.chair.chair_leg.ChairLeg"/>
+    <generator name="comp_leg" id="misc.karthik.models.chair.chair_leg.CylispheLeg"/>
+    <generator name="bar_back" id="misc.karthik.models.chair.chair_backrest.BarBackRest"/>
+    <generator name="base" id="misc.karthik.models.chair.chair_base.ChairBase"/>
+    <generator name="flower_base" id="misc.karthik.models.chair.chair_base.FlowerBase"/>
+
+    <match name="chair" condition="/chair"/>
+    <onmatch match="chair" key="seed" value="5555"/>
+
+    <match name="comp_leg" condition="//comp_leg"/>
+    <onmatch match="comp_leg">
+        <action key="generator" value="simpleleg"/>
+        <action key="config.type" value="square"/>
+    </onmatch>
+
+    <match name="change_base" condition="//base"/>
+    <onmatch match="change_base">
+        <action key="generator" value="flower_base"/>
+        <action key="config.width" value="10"/>
+        <action key="config.cover_area" value="10"/>
+    </onmatch>
+
+    <match name="barsLimited" condition="/chair/bar_back[10 &lt;= config.no_of_holes &lt;= 20]"/>
+    <onmatch match="barsLimited" key="config.no_of_holes" value="5"/>
+</recipe>
+

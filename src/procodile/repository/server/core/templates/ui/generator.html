@@ -1,0 +1,115 @@
+{% extends "ui/base.html" %}
+
+{% block content %}
+
+<div id="contents">
+    <div id="wrapper" class="list">
+        <div class="main">
+            <h1 class="mainBlockTitle">{{ package.title }} >> {{ gen.title }} </h1>
+            <div class="widgetInfo">
+                <div class="leftSide">
+                    <div class="rightSide">
+                        <ul class="topList">
+                            <li class="download">
+                                <a class="on" href="/download/{{ gen.generator_id }}" type="application/procodile-generators"> Download </a>
+                            </li>
+                            <li> 84KB </li>
+
+                        </ul>
+                        <ul class="bottomList">
+                            <li> {{ gen.views }} views </li>
+                            <li> {{ gen.num_downloads }} downloads last 7 days </li>
+                            <li> {{ gen.num_downloads }} total downloads </li>
+                            <li>
+                                {% if user.is_authenticated %}
+                                <div>
+                                    <span>Rating: </span>
+                                    <form class="widgetinfo-vote" action="/generator/{{gen.generator_id}}/tag" method="post" name="rating_form_minus">
+                                        <input type="hidden" value="remove" name=".fav"/>
+                                        <input type="image" src="/static/media/core/images/blocks/minus.png"/>
+                                    </form>
+                                    <label for="rating_value">
+                                        <span id="rating_value">{{ gen.num_likes }}</span>
+                                    </label>
+                                    <form class="widgetinfo-vote" action="/generator/{{gen.generator_id}}/tag" method="post" name="rating_form_plus">
+                                        <input type="hidden" value="add" name=".fav"/>
+                                        <input type="image" src="/static/media/core/images/blocks/plus.png"/>
+                                    </form>
+                                </div>
+                                {% else %}
+                                <span>Rating: </span>
+                                <span id="rating_value"> {{ gen.num_likes }} </span>
+                                (
+                                <a href="/login?next=/generator/{{gen.generator_id}}">login to vote</a>
+                                )
+                                {% endif %}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="midSide">
+                        <div id="toptenlist" class="side-container hslice" style="display: block;">
+                            <h3>Generators in {{ package.title }} Package</h3>
+                            <div id="topten-list">
+                                {% for gen in package.gens  %}
+                                <div class="gen-summary news-thumb">
+                                    <h3>
+                                        {% for image in gen.fimages|slice:":1"  %}
+                                        <img alt="No Image" src="/static/{{ image }}"/>
+                                        {% endfor %}
+                                        <a href="/generator/{{ gen.generator_id }}">
+                                            {{ gen.title }}
+                                        </a>
+                                    </h3>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="title">
+                        <h2>
+                            <a class="navlink" name="Widget Page" href="/widget/4018/">{{ gen.title }}</a>
+                        </h2>
+                        <span>
+                            by
+                            <a href="/user/{{ gen.username }}">{{ gen.username }}</a>
+                        </span>
+                    </div>
+                    <div class="screenshot" style="width: 180px;">
+                        {% for image in gen.fimages|slice:":1"  %}
+                        <a href="/download/{{ gen.generator_id }}" type="application/procodile-generators">
+                            <img id="widget-largethumb" width="180" height="120" alt="No ImAGE" src="/static{{ image }}"/>
+                        </a>
+                        {% endfor %}
+                        <span class="left">v{{ gen.version }}</span>
+                        <span class="right">{{ gen.date_uploaded|date:"d M Y" }}</span>
+                    </div>
+                </div>
+                <p>  {{ gen.description }} </p>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div id="toptenlist" class="side-container hslice" style="display: block;">
+                <h2 class="topten">{{ gen.username }}'s Top Generators</h2>
+                <div id="topten-list">
+                    {% for gen in user_top  %}
+                    <div class="news-summary news-thumb">
+                        <h3>
+                            {% for image in gen.fimages|slice:":1"  %}
+                            <img alt="No Image" src="/static/{{ image }}"/>
+                            {% endfor %}
+                            <a href="/generator/{{ gen.generator_id }}">
+                                {{ gen.title }}
+                            </a>
+                        </h3>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+{% endblock content %}

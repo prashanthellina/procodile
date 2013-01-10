@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package title="medium" version="None">
+    <description/>
+    <generators>
+        <generator id="chair.ChairBackRest">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="width" value="(0.29999999999999999, 1.0)"/>
+                <param name="back_rest_thickness" value="(0.02, 0.10000000000000001)"/>
+                <param name="back_rest_height" value="(0.0, 1.0)"/>
+            </config>
+        </generator>
+        <generator id="chair.ChairLeg">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="leg_height" value="(0.10000000000000001, 1)"/>
+                <param name="leg_thickness" value="(0.01, 0.10000000000000001)"/>
+                <param name="type" value="['square', 'cylinder', 'triangular']"/>
+            </config>
+        </generator>
+        <generator id="chair.ChairBase">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="width" value="(0.29999999999999999, 1.0)"/>
+                <param name="base_length" value="(0.20000000000000001, 4)"/>
+                <param name="base_thickness" value="(0.02, 0.10000000000000001)"/>
+            </config>
+        </generator>
+        <generator id="chair.Chair">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="width" value="(0.29999999999999999, 1.0)"/>
+                <param name="leg_height" value="(0.10000000000000001, 1)"/>
+                <param name="leg_thickness" value="(0.01, 0.10000000000000001)"/>
+                <param name="back_rest_height" value="(0.0, 1.0)"/>
+                <param name="back_rest_thickness" value="(0.02, 0.10000000000000001)"/>
+                <param name="base_length" value="(0.40000000000000002, 0.69999999999999996)"/>
+                <param name="base_thickness" value="(0.02, 0.10000000000000001)"/>
+                <param name="leg_type" value="['square', 'cylinder', 'triangular']"/>
+            </config>
+            <sub_generator id="chair.ChairBase"/>
+            <sub_generator id="chair.ChairBackRest"/>
+            <sub_generator id="chair.ChairLeg"/>
+        </generator>
+        <generator id="normal.Tree">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="diameter" value="(0.050000000000000003, 0.5)"/>
+                <param name="height" value="(0.5, 5)"/>
+            </config>
+        </generator>
+        <generator id="tree.Tree">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="height" value="(0.10000000000000001, 5)"/>
+                <param name="diameter" value="(0.050000000000000003, 0.5)"/>
+                <param name="branches" value="(10, 20)"/>
+                <param name="depth" value="4"/>
+            </config>
+            <sub_generator id="tree.Tree"/>
+        </generator>
+    </generators>
+</package>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package version="1.0" title="city">
+    <description/>
+    <generators>
+        <generator id="city.Generator">
+            <parent id="sector.Generator"/>
+            <model id="city.Model"/>
+            <config>
+                <param name="num_roads" value="Range(10, 20)"/>
+                <param name="min_gap_between_roads" value="50"/>
+                <param name="length" value="Range(1000, 5000)"/>
+                <param name="road_width" value="20"/>
+                <param name="height" value="Range(1000, 5000)"/>
+            </config>
+            <sub_generator id="sector.Generator"/>
+            <sub_generator repo="http://localhost:9000" version="0.2" id="karthik.nature.tree.Generator"/>
+        </generator>
+        <generator id="sector.Generator">
+            <model id="sector.Model"/>
+            <config>
+                <param name="num_roads" value="Range(10, 20)"/>
+                <param name="min_gap_between_roads" value="10"/>
+                <param name="length" value="Range(1000, 5000)"/>
+                <param name="road_width" value="10"/>
+                <param name="height" value="Range(1000, 5000)"/>
+            </config>
+        </generator>
+    </generators>
+    <models>
+        <model id="city.Model"/>
+        <model id="sector.Model"/>
+    </models>
+</package>

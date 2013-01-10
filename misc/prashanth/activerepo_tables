@@ -1,0 +1,41 @@
+= users =
+* uid
+* username
+* password
+
+= generators =
+* id
+* uid
+* version
+* gen_path
+* title
+* descrption
+* configuration
+* views
+
+= generator_relationships =
+* a_gen_id
+* b_gen_id
+* relationship_type (sub_generator, parent)
+
+= generator_tags =
+* uid
+* gen_id
+* tag (:hate, :like, others)
+
+= category_tree =
+* gen_id
+
+= packages =
+* id
+* uid
+* version
+* pkg_path
+* title
+* description
+* num_downloaded
+* uploaded_date
+
+= package_generators =
+* pkg_id
+* gen_id

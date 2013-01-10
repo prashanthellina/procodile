@@ -1,0 +1,36 @@
+<package title="mypackage" version="2.4">
+
+    <description>This is my great package.</description>
+
+    <generators>
+
+        <generator id="city.Generator">
+
+            <parent id="prashanth.cities.CityGen" repo="http://www.prashanthellina.com/repo"/>
+            <parent id="city.BaseCityGen"/>
+
+            <model id="city.Model"/>
+
+            <config>
+                <param name="length" value="Range(100, 200)"/>
+                <param name="width" value="50"/>
+            </config>
+
+            <sub_generators>
+                <sub_generator id="sector.Generator">
+                <sub_generator id="karthik.sectors.KSectorGenerator" repo="http://www.karthikbala.com/repo" version="1.04"/>
+            </sub_generators>
+
+        </generator>
+
+    </generators>
+
+    <models>
+
+        <model id="city.Model">
+            <parent id="prashanth.cities.CityModel" repo="http://www.prashanthellina.com/repo" version="1.5"/>
+        </model>
+
+    </models>
+
+</package>

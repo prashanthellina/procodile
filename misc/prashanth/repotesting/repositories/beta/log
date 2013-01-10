@@ -1,0 +1,22 @@
+2009-07-17 08:57:31,472 DEBUG started: package_home=prashanth
+2009-07-17 08:57:31,477 DEBUG tmp: file=/tmp/hwCwoney, dirpath=/tmp/hwCwoney_dir, repo=/media/data/code/blockworld/checkout/blockworld/misc/prashanth/repotesting/repositories/beta
+2009-07-17 08:57:31,477 DEBUG content_length = 7176
+2009-07-17 08:57:31,478 DEBUG storing zip file ...
+2009-07-17 08:57:31,478 DEBUG to read = 4096
+2009-07-17 08:57:31,478 DEBUG bytes read = 4096
+2009-07-17 08:57:31,478 DEBUG to read = 3080
+2009-07-17 08:57:31,478 DEBUG bytes read = 7176
+2009-07-17 08:57:31,479 DEBUG zip file stored
+2009-07-17 08:57:31,481 DEBUG package_dirs: ['aircraft']
+2009-07-17 15:24:46,533 DEBUG started: package_home=prashanth
+2009-07-17 15:24:46,543 DEBUG tmp: file=/tmp/UYHrbC6U, dirpath=/tmp/UYHrbC6U_dir, repo=/media/data/code/blockworld/checkout/blockworld/misc/prashanth/repotesting/repositories/beta
+2009-07-17 15:24:46,544 DEBUG content_length = 8974
+2009-07-17 15:24:46,544 DEBUG storing zip file ...
+2009-07-17 15:24:46,544 DEBUG to read = 4096
+2009-07-17 15:24:46,544 DEBUG bytes read = 4096
+2009-07-17 15:24:46,544 DEBUG to read = 4096
+2009-07-17 15:24:46,545 DEBUG bytes read = 8192
+2009-07-17 15:24:46,545 DEBUG to read = 782
+2009-07-17 15:24:46,545 DEBUG bytes read = 8974
+2009-07-17 15:24:46,545 DEBUG zip file stored
+2009-07-17 15:24:46,548 DEBUG package_dirs: ['city']

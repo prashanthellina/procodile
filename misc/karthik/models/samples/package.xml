@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package title="samples" version="None">
+    <description/>
+    <generators>
+        <generator id="basic.boolean.BooleanGen">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="cut" value="[True, False]"/>
+                <param name="common" value="[True, False]"/>
+                <param name="fuse" value="[True, False]"/>
+            </config>
+        </generator>
+        <generator id="basic.primitives.PrimitiveGen">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="box" value="[True, False]"/>
+                <param name="sphere" value="[True, False]"/>
+                <param name="cylinder" value="[True, False]"/>
+                <param name="plane" value="[True, False]"/>
+                <param name="polygon" value="[True, False]"/>
+            </config>
+        </generator>
+        <generator id="medium.chair.ChairBackRest">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="width" value="(0.29999999999999999, 1.0)"/>
+                <param name="back_rest_thickness" value="(0.02, 0.10000000000000001)"/>
+                <param name="back_rest_height" value="(0.0, 1.0)"/>
+            </config>
+        </generator>
+        <generator id="medium.chair.ChairLeg">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="leg_height" value="(0.10000000000000001, 1)"/>
+                <param name="leg_thickness" value="(0.01, 0.10000000000000001)"/>
+                <param name="type" value="['square', 'cylinder', 'triangular']"/>
+            </config>
+        </generator>
+        <generator id="medium.chair.ChairBase">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="width" value="(0.29999999999999999, 1.0)"/>
+                <param name="base_length" value="(0.20000000000000001, 4)"/>
+                <param name="base_thickness" value="(0.02, 0.10000000000000001)"/>
+            </config>
+        </generator>
+        <generator id="medium.chair.Chair">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="width" value="(0.29999999999999999, 1.0)"/>
+                <param name="leg_height" value="(0.10000000000000001, 1)"/>
+                <param name="leg_thickness" value="(0.01, 0.10000000000000001)"/>
+                <param name="back_rest_height" value="(0.0, 1.0)"/>
+                <param name="back_rest_thickness" value="(0.02, 0.10000000000000001)"/>
+                <param name="base_length" value="(0.40000000000000002, 0.69999999999999996)"/>
+                <param name="base_thickness" value="(0.02, 0.10000000000000001)"/>
+                <param name="leg_type" value="['square', 'cylinder', 'triangular']"/>
+            </config>
+            <sub_generator id="medium.chair.ChairBase"/>
+            <sub_generator id="medium.chair.ChairBackRest"/>
+            <sub_generator id="medium.chair.ChairLeg"/>
+        </generator>
+        <generator id="medium.normal.Tree">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="diameter" value="(0.050000000000000003, 0.5)"/>
+                <param name="height" value="(0.5, 5)"/>
+            </config>
+        </generator>
+        <generator id="medium.tree.Tree">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="height" value="(0.10000000000000001, 5)"/>
+                <param name="diameter" value="(0.050000000000000003, 0.5)"/>
+                <param name="branches" value="(10, 20)"/>
+                <param name="depth" value="4"/>
+            </config>
+            <sub_generator id="medium.tree.Tree"/>
+        </generator>
+    </generators>
+</package>

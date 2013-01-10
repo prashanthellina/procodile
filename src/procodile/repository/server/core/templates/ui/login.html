@@ -1,0 +1,79 @@
+{% extends "ui/base.html" %}
+
+{% block content %}
+
+<div id="contents">
+    <div id="wrapper" class="list">
+
+        <div class="reg-form">
+            <div class="form-register">
+                <h2>Login to Procodile</h2>
+
+                <div class="login-Procodile" style="display: block;">
+                    {% if error %}
+                    <div class="warning">
+                        <div>
+                            <h3>{{ error }}</h3>
+                        </div>
+                        <p>Please try again. Forgot your password? You can retrieve it using the form below.</p>
+                    </div>
+                    {% endif %}
+                    <div class="dialog-section">
+                        <form action="/login" method="POST">
+                            <div class="form-row">
+                                <label class="dialog-label" for="login-username">Username</label>
+                                <input class="login-Procodile-username text" type="text" value="" name="username"/>
+                            </div>
+                            <div class="form-row">
+                                <label class="dialog-label" for="login-password">Password</label>
+                                <input class="login-Procodile-password text" type="password" name="password"/>
+                                <a class="dialog-link forgot-link" href="/login">Lost username or password?</a>
+                            </div>
+                            <div>
+                                <input type="checkbox" checked="checked" name="persistent"/>
+                                <label class="inline">
+                                    <strong>Keep me logged in on this computer</strong>
+                                </label>
+                                <br/>
+                                <input type="submit" value="Login"/>
+                                <input type="hidden" name="next" value="{{ next }}" />
+                            </div>
+                        </form>
+
+                        <form class="forgot" method="post" action="/recover">
+                            <h3>Forgot your username or password?</h3>
+                            <div class="form-row">
+                                <label class="dialog-label" for="email">Enter your email address</label>
+                                <input class="text" type="text" name="email"/>
+                                <input type="submit" value="Retrieve Password"/>
+                            </div>
+                            <input type="hidden" value="1" name="process"/>
+                        </form>
+                    </div>
+                </div>
+
+                <script charset="utf-8" type="text/javascript">
+                    $(document).trigger('loginFormLoaded', null);
+                </script>
+            </div>
+            <div class="register-info">
+                <h3>
+                    Don't have an account yet?
+                    <a href="/register">Join!</a>
+                </h3>
+                <p> Procodile is a place to discover and share content from around the Web, from the smallest blog to major news outlets. Everything is submitted and voted on by people like you. </p>
+                <ul class="register-why">
+                    <li class="why-discover">Discover the best of the web</li>
+                    <li class="why-Procodile">Promote stuff that you're into</li>
+                    <li class="why-re">Find more stuff with our Recommendation Engine</li>
+                    <li class="why-comment">Make your voice heard in the comments</li>
+                    <li class="why-friends">Follow what your friends are Procodileing</li>
+                    <li class="why-custom">Customize your Procodile experience</li>
+                </ul>
+            </div>
+        </div>
+        <br style="clear: both;"/>
+    </div>
+</div>
+
+{% endblock content %}

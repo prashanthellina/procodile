@@ -1,0 +1,121 @@
+{% extends "ui/base.html" %}
+
+{% block content %}
+
+{% if gens.object_list %}
+<div id="contents">
+    <div id="wrapper" class="list">
+        <div class="main">
+            <h1 class="mainBlockTitle">{{ type }} Generators</h1>
+            <ul id="blocks">
+                {% for gen in gens.object_list  %}
+                <li>
+                    <div class="singleBlock">
+                        <div class="screenshot">
+                            <a href="/generator/{{ gen.generator_id }}">
+                                {% for image in gen.fimages|slice:":1"  %}
+                                <img width="160" height="120" alt="No Image" src="/static/{{ image }}"/>
+                                {% endfor %}
+                            </a>
+                        </div>
+                        <a class="title" href="/generator/{{ gen.generator_id }}"> {{ gen.title|default:"title" }} </a>
+                        <p class="description">
+                            <a class="desc" href="/generator/{{ gen.generator_id }}">{{ gen.description }}</a>
+                            <br>
+                            {{ gen.num_downloads }} downloads &nbsp; <a href="/user/{{ gen.username }}/generators"> {{ gen.username }} </a>
+                        </p>
+                        <a class="download" href="/download/{{ gen.generator_id }}" type="application/x-opera-widgets"> Download </a>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+            <div class="pages">
+
+                {% if gens.has_previous %}
+                <span class="nextprev">
+                    {% if item_type %}
+                    <a href="/{{ item_type }}/{{ item_name }}/generators/{{ gens.previous_page_number }}">previous</a>
+                    {% else %}
+                    <a href="/generators/{{ gens.previous_page_number }}"><< previous</a>
+                    {% endif %}
+                </span>
+                {% endif %}
+
+                {% if gens.has_next %}
+                <span class="current">
+                    {% if item_type %}
+                    <a href="/{{ item_type }}/{{ item_name }}/generators/{{ gens.previous_page_number }}">{{ gens.number }}</a>
+                    {% else %}
+                    <a href="/generators/{{ gens.previous_page_number }}">{{ gens.number }}</a>
+                    {% endif %}
+                </span>
+
+                <span class="nextprev">
+                    {% if item_type %}
+                    <a href="/{{ item_type }}/{{ item_name }}/generators/{{ gens.next_page_number }}">next</a>
+                    {% else %}
+                    <a href="/generators/{{ gens.next_page_number }}">next >></a>
+                    {% endif %}
+                </span>
+                {% endif %}
+            </div>
+        </div>
+        <div class="sidebar">
+            <div id="toptenlist" class="side-container hslice" style="display: block;">
+                <h2 class="topten">Top Authors</h2>
+                <div id="topten-list">
+                    {% for author in top_authors  %}
+                    <div class="news-summary news-thumb">
+                        <h3>
+                            <img alt="photo" src="/static/media/core/images/usr_avatar.gif"/>
+                            <a href="/user/{{ author }}">
+                                {{ author }}
+                            </a>
+                        </h3>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+
+            <div id="toptenlist" class="side-container hslice" style="display: block;">
+                <h2 class="topten">Most Recent Generators</h2>
+                <div id="topten-list">
+                    {% for gen in recent_gens  %}
+                    <div class="news-summary news-thumb">
+                        <h3>
+                            {% for image in gen.fimages|slice:":1"  %}
+                            <img alt="No Image" src="/static/{{ image }}"/>
+                            {% endfor %}
+                            <a href="/generator/{{ gen.generator_id }}">
+                                {{ gen.title }}
+                            </a>
+                        </h3>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div id="recommended-list" class="side-container">
+                <h2>Customize Models</h2>
+                <img width="90" height="67" border="0" src="/static/media/core/images/logo.bmp" style="float: right; margin-left: 5px;" alt="PIDE"/>
+                <p class="first">PIDE is an intelligent development environment for building procedural models that also allows you to configure the models making you to create entirely new ones out of the existing.</p>
+                {% if user.is_authenticated %}
+                {% else %}
+                <p>
+                    <a href="/login">Login</a>
+                    or
+                    <a href="/register">register</a>
+                    to get started!
+                </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% else %}
+<p>No generators are available.</p>
+{% endif %}
+
+{% endblock content %}

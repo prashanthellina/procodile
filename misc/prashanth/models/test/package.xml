@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package title="test" version="None">
+    <description/>
+    <generators>
+        <generator id="test.Test">
+            <title/>
+            <description/>
+            <config>
+                <param name="density" value="(0.10000000000000001, 1.5)"/>
+            </config>
+        </generator>
+    </generators>
+</package>

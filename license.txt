@@ -1,0 +1,91 @@
+Non-Disclosure Agreement
+
+Terms of Agreement:
+
+The terms of this Agreement shall commence on the Effective Date and shall continue until terminated by [Client] in writing at any time, with or without cause. Should the need arise, Perfect Paradigm Software & Solutions Private Limited, referred to as Perfect Paradigm hereafter, reserves the right to terminate its business relationship with [Client] should a more profitable opportunity arise. This Agreement will terminate with notice of at least one month upon written notification from [Client].
+
+On termination of this Agreement, Perfect Paradigm or its principals, its consultants, agents, licensed or unlicensed entities, acting on behalf of Perfect Paradigm, and all individuals associated with Perfect Paradigm (and henceforth collectively referred to as Perfect Paradigm in the rest of this agreement), shall return to [Client], in reasonable time, all copies of code developed for [Client], programs developed for [Client], supplies offered by [Client], and any other materials associated with the development of said product or program, within a term specified by [Client]. This would, however, exclude code, programs, supplies and materials that become property of Perfect Paradigm by explicit or implied contract.
+
+ 
+
+Confidentiality:
+
+The Product and related information is proprietary and confidential information to [Client]. Perfect Paradigm agrees not to disclose or provide the Product, work product, derivative work product, either in part or entirety, any substantive, descriptive or related documentation, programming code in any form or language, whether in a native, altered or compiled state, or ANY collaborative, derived or related information (including the Product features or the results of use or testing) to any third party or use the Product for any purpose other than provided in this and any other subsequent agreements.
+
+ 
+
+Perfect Paradigm, however, may disclose confidential information in accordance with judicial or other governmental order, provided recipient shall give [Client] reasonable written notice upon which to exercise its rights under all applicable law prior to such disclosure, and shall comply with any applicable protective order or equivalent. Further, Perfect Paradigm, agrees that these provisions shall survive the termination of this Agreement with respect to any and all information that has not been made public by [Client].
+
+ 
+
+Perfect Paradigm is prohibited from sharing, using, discussing, or implementing, any of the ideas, suggestions, code, user interface, and all unique product ideas offered to it by [Client] except for the specific needs of [Client]. Should this agreement terminate, Perfect Paradigm is prohibited in using any of the intellectual property of [Client], in any other product developed by or created by Perfect Paradigm.
+
+ 
+
+This Confidentiality Clause as well as the subsequent clause of Restricted Rights does not limit Perfect Paradigm from the right to use information if it is obtained either by [Client] or Perfect Paradigm from another source which does not have any such restriction.
+
+ 
+
+Governing Law and Attorneys Fees:
+
+This agreement shall be governed by the laws of the [Client], and all Indo-German trade Treaties held in common. And Perfect Paradigm, its principals, its consultants, and ALL other parties associated with the development and implementation of the requested products and programs, further consents to jurisdiction by [Client's country] Courts. If either [Client], or Perfect Paradigm, employs attorneys to enforce any rights arising out of or relating to this Agreement, the prevailing party shall be entitled to recover reasonable attorneys' fees.
+
+ 
+
+Restricted Rights:
+
+The Product, work product, derivative work product, either in part or entirety, any substantive, descriptive or related documentation, programming code in any form or language, whether in a native, altered or compiled state, or ANY collaborative, derived or related information (including the Product features or the results of use or testing), is offered with restricted rights. Perfect Paradigm is prohibited from disclosure to any third party as to the course of development, specifics of development, and ANY other matter relating to this agreement or subsequent agreements.
+
+ 
+
+Export Restrictions:
+
+Perfect Paradigm acknowledges that any product or work is subject to the export control laws and regulations of [Client's country] and any amendments thereof. Perfect Paradigm confirms that with respect to this product or work, it will not export or re-export it directly or indirectly either to any countries that are subject to [Client's country] export restrictions, or to any end user who will utilise them in the design, development, or production of nuclear, chemical or biological weapons, or any end user who has been prohibited from participating in [Client's country] export transactions by any federal agency of the [Client's country] government. This restriction extends to end users who may be suspected of attempting to duplicate product features, or any product elements.
+
+ 
+
+Entire Agreement:
+
+This Agreement constitutes the complete and exclusive agreement between [Client], and Perfect Paradigm, with respect to the subject matter hereof, and supersedes all prior oral or written understandings, communications, or agreements of [Client], and Perfect Paradigm, its principals, its consultants, and ALL other parties associated with the development and implementation of the requested products and programs.
+
+ 
+
+Parties Bound:
+
+If this agreement is signed, it is assumed that the individual signing the agreement has authority to execute the agreement on behalf of Perfect Paradigm and agrees that the development of a product and all copies thereof, shall remain on the company premises.
+
+ 
+
+IN WITNESS WHEREOF, RECIPIENT HAS CAUSED THIS AGREEMENT TO BE EXECUTED BY ITS DULY AUTHORIZED REPRESENTATIVE.
+
+ 
+
+ 
+
+[Company Name and Address]
+
+ 
+
+___________________________________
+
+[Official's name & designation]
+
+ 
+
+ 
+
+Perfect Paradigm Software & Solutions Private Limited
+
+(Incorporated as a Private Limited Company under the laws and jurisdiction of the nation of India)
+
+ 
+
+ 
+
+ 
+
+ 
+
+___________________________________
+
+[Name], [Authorised Signatory]

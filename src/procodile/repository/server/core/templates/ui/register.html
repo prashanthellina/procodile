@@ -1,0 +1,85 @@
+{% extends "ui/base.html" %}
+
+{% block content %}
+
+<div id="contents">
+    <div id="wrapper" class="list">
+
+        <div class="form-register">
+            <h2>Become a member of Procodile</h2>
+
+            <div class="reg-section login-register">
+                {% if error %}
+                <div class="warning">
+                    <div>
+                        <h3>{{ error }}</h3>
+                    </div>
+                </div>
+                {% endif %}
+                <form action="/register" name="Procodile" method="POST">
+                    <div class="dialog-section">
+                        <div class="form-row">
+                            <label class="dialog-label" for="username">Choose a username (no spaces)</label>
+                            {{form.username}}
+                            <div class="form-note note-username">&nbsp;</div>
+                        </div>
+
+                        <div class="form-row">
+                            <label class="dialog-label" for="password">Choose a password</label>
+                            <input type="password" class="register-input text password[a]" name="password1" />
+                            <div class="form-note note-password[a]">&nbsp;</div>
+                        </div>
+
+                        <div class="form-row">
+                            <label class="dialog-label" for="verify">Retype password</label>
+                            <input type="password" class="register-input text password[b]" name="password2" />
+
+                            <div class="form-note note-password[b]">&nbsp;</div>
+                        </div>
+
+                        <div class="form-row">
+                            <label class="dialog-label" for="email">Email address (must be real!)</label>
+                            {{form.email}}
+                            <div class="form-note note-email">&nbsp;</div>
+                        </div>
+
+                        <div class="form-row">
+
+                            <input type="checkbox" checked="checked" name="newsletter" />
+                            <label class="inline" for="newsletter">Send me occasional Procodile updates.</label>
+                        </div>
+                        <div class="form-row">
+                            <input type="checkbox" checked="checked" name="bestofProcodileweekly" />
+                            <label class="inline" for="bestofProcodileweekly">Send me a weekly email featuring the Best of Procodile.</label>
+                        </div>
+                    </div>
+                    <div class="dialog-tray">
+                        <span>I agree to the <a href="/tou">Terms of Use</a> and <a href="/privacy">Privacy Policy</a></span>
+
+                        <input type="submit" class="continue" value="I agree, continue..."/>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="register-info">
+            <h3>Why join Procodile?</h3>
+            <p>
+                Procodile is a place to discover and share content from around the Web, from the smallest blog to major news outlets.
+                Everything is submitted and voted on by people like you.
+            </p>
+            <ul class="register-why">
+                <li class="why-discover">Discover the best of the web</li>
+                <li class="why-Procodile">Promote stuff that you're into</li>
+                <li class="why-re">Find more stuff with our Recommendation Engine </li>
+
+                <li class="why-comment">Make your voice heard in the comments</li>
+                <li class="why-friends">Follow what your friends are Procodileing</li>
+                <li class="why-custom">Customize your Procodile experience</li>
+            </ul>
+        </div>
+        <br style="clear: both;" />
+
+    </div>
+</div>
+{% endblock content %}

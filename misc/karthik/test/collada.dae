@@ -1,0 +1,54 @@
+<COLLADA version="1.4.1">
+    <asset>
+        <unit meter="1" name="meter"/>
+        <up_axis>
+            Y_UP
+        </up_axis>
+    </asset>
+    <library_geometries>
+        <geometry id="box-lib" name="box">
+            <mesh>
+                <source id="box-lib-positions" name="position">
+                    <float_array count="8" id="box-lib-positions-array">
+                        0.0 0.0 1.09155393903 0.0 0.197583055163 0.0 0.0 0.0 0.0 0.0 0.197583055163 1.09155393903 0.197583055163 0.0 0.0 0.197583055163 0.197583055163 0.0 0.197583055163 0.0 1.09155393903 0.197583055163 0.197583055163 1.09155393903
+                    </float_array>
+                    <technique_common>
+                        <accessor count="8" offset="0" source="box-lib-positions-array" stride="3">
+                            <param name="X" type="float"/>
+                            <param name="Y" type="float"/>
+                            <param name="Z" type="float"/>
+                        </accessor>
+                    </technique_common>
+                </source>
+            </mesh>
+            <mesh>
+                <source id="box-lib-normals" name="normal">
+                    <float_array count="8" id="box-lib-normals-array">
+                        -0.891510933121 -0.44575546656 0.0806865550013 -0.701384916963 0.701384916963 -0.126958247122 -0.44575546656 -0.891510933121 -0.0806865550013 -0.685018337784 0.685018337784 0.247991438961 0.685018337784 -0.685018337784 -0.247991438961 0.891510933121 0.44575546656 -0.0806865550013 0.701384916963 -0.701384916963 0.126958247122 0.44575546656 0.891510933121 0.0806865550013
+                    </float_array>
+                    <technique_common>
+                        <accessor count="8" offset="0" source="box-lib-normals-array" stride="3">
+                            <param name="X" type="float"/>
+                            <param name="Y" type="float"/>
+                            <param name="Z" type="float"/>
+                        </accessor>
+                    </technique_common>
+                </source>
+            </mesh>
+            <mesh>
+                <vertices id="box-lib-vertices">
+                    <input semantic="POSITION" source="#box-lib-positions"/>
+                </vertices>
+            </mesh>
+            <mesh>
+                <triangles count="12" material="BlueSG">
+                    <input offset="0" semantic="VERTEX" source="#box-lib-vertices"/>
+                    <input offset="1" semantic="NORMAL" source="#box-lib-normals"/>
+                    <p>
+                        0 0 1 1 2 2 1 1 0 0 3 3 4 4 5 5 6 6 7 7 6 6 5 5 6 6 2 2 4 4 2 2 6 6 0 0 5 5 1 1 7 7 3 3 7 7 1 1 4 4 2 2 1 1 1 1 5 5 4 4 3 3 0 0 6 6 6 6 7 7 3 3
+                    </p>
+                </triangles>
+            </mesh>
+        </geometry>
+    </library_geometries>
+</COLLADA>

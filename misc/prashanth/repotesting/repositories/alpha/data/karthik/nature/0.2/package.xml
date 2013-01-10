@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package version="0.2" title="nature">
+    <description>
+        Represents nature
+    </description>
+    <generators>
+        <generator id="tree.Generator">
+            <model id="tree.Model"/>
+            <config>
+                <param name="length" value="Range(1000, 5000)"/>
+                <param name="height" value="Range(1000, 5000)"/>
+            </config>
+        </generator>
+    </generators>
+    <models>
+        <model id="tree.Model"/>
+    </models>
+</package>

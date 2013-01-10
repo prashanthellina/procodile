@@ -1,0 +1,65 @@
+=Toolbar=
+
+File->Open (#Developpers Icons/PNG/New Document.png)
+File->Upload (#Developpers Icons/PNG/Send Document.png)
+
+Document->Reset  (#Developpers Icons/PNG/.png)
+Document->Close  (#Developpers Icons/PNG/Backup Green Button.png)
+Document->Run (#Developpers Icons/PNG/Play.png)
+Document->Pause (#Developpers Icons/PNG/Pause.png)
+Document->Stop (#Developpers Icons/PNG/Stop.png)
+
+Windows->BuildTree (icons/PNG/onebit_18.png)
+Windows->NodeInfo (icons/PNG/onebit_20.png)
+Windows->Shell (icons/PNG/onebit_22.png)
+Windows->Configuration (icons/PNG/onebit_21.png)
+Windows->HideAll (icons/PNG/onebit_13.png)
+Windows->ShowAll (icons/PNG/onebit_12.png)
+
+Help->About (Sweetie-BasePacl-v3/24-message-info.png, Quartz Icon Pack/Info.png)
+Help->Settings (Sweetie-BasePacl-v3/24-settings-silver.png)
+
+View->Fit (Sweetie-BasePacl-v3/24-zoom-fill.png)
+View->Shading->Flat (Milky/64/50.png)
+View->Shading->Smooth (Milky/64/101.png)
+View->Navigation->Fly
+View->Navigation->Examine
+
+Navigation->Perspective
+Navigation->Top
+Navigation->Bottom
+Navigation->Left
+Navigation->Right
+Navigation->Front
+Navigation->Back
+Navigation->ZoomIn (Sweetie-BasePacl-v3/24-zoom-in.png, Milky/64/106.png)
+Navigation->ZoomOut (Sweetie-BasePacl-v3/24-zoom-in.png, Milky/64/107.png)
+Navigation->LookAtObject
+
+=In BuildTree=
+
+Root (fatcow-hosting/32x32_0220/chart_organization.png)
+Generator (fatcow-hosting/32x32_0120/brick.png)
+Geom (fatcow-hosting/32x32_0120/bricks.png)
+
+=Document Tabs=
+State->Ready (Milky/64/101.png)
+State->Running (Milky/64/98.png)
+State->Paused (Milky/64/93.png)
+
+=Configuration=
+Maximize (Sweetie-BasePacl-v3/24-image.png)
+MoveUp (Sweetie-BasePacl-v3/24-em-up.png, Milky/64/19.png)
+MoveDown (Sweetie-BasePacl-v3/24-em-down.png, Milky/64/24.png)
+Add (Sweetie-BasePacl-v3/24-em-plus.png, Milky/64/112.png)
+Del (Sweetie-BasePacl-v3/24-em-cross.png, Milky/64/117.png)
+Edit (Sweetie-BasePacl-v3/24-frame.png, Milky/64/11.png)
+
+Root-Generator
+Generator
+
+Match
+Match->Condition
+
+OnMatch/Action
+KV Pair

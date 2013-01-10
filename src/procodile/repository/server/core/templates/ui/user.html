@@ -1,0 +1,129 @@
+{% extends "ui/base.html" %}
+
+{% block content %}
+
+<div id="contents">
+    <div id="wrapper">
+
+        <div class="user-profile">
+            <div class="profile-header">
+                <div class="vcard">
+                    <div class="vcard-side">
+                        <img class="photo" width="120" height="120" alt="Burento" src="/static/media/core/images/usr_avatar.gif"/>
+                    </div>
+                    <h2>
+                        <span class="fn">{{user_info.first_name}} {{user_info.last_name}}</span>
+                        <em>
+                            (
+                            <span class="nickname">{{username}}</span>
+                            )
+                        </em>
+                    </h2>
+                    <!--<div class="profile-location">
+                        A {{user_info.age}} year-old {{user_info.sex}} from
+                        <span class="adr">
+                            <span class="locality">{{user_info.state}}</span>
+                            (
+                            <abbr class="country-name" title="United States">{{user_info.Country}}</abbr>
+                            )
+                        </span>
+                        who joined Digg on January 10th, 2007
+                    </div>-->
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="profilebar">
+            <div class="tab">
+                <h3>About</h3>
+            </div>
+            <p class="bio">
+                {{user_info.about}}
+                <br>
+                Date Joined: {{user_info.date_joined|date:"d M Y"}}
+            </p>
+
+            {% if user_packs %}
+            <div id="toptenlist" class="side-container hslice" style="display: block;">
+                <div class="tab first">
+                    <h3>Packages</h3>
+                </div>
+                <div id="topten-list">
+                    {% for pack in user_packs  %}
+                    <div class="news-summary news-thumb">
+                        <h3>
+                            {% for image in pack.fimages|slice:":1"  %}
+                            <img alt="No Image" src="/static/{{ image }}"/>
+                            {% endfor %}
+                            <a href="/package/{{ pack.package_id }}">
+                                {{ pack.title }}
+                            </a>
+                        </h3>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="tab">
+                <h3>Stats</h3>
+            </div>
+            <p class="bio">
+                Total Generators: {{user_info.num_generators}}
+                <br>
+                Total Packages: {{user_info.num_packages}}
+            </p>
+            {% endif %}
+        </div>
+
+        <div class="profile-main">
+            {% if user_info.favs %}
+            <div class="tab">
+                <h3>Favorites</h3>
+            </div>
+
+            {% for gen in user_info.favs  %}
+            <div id="fave-3602019" class="sum sum-n">
+                {% for image in gen.fimages|slice:":1"  %}
+                <img alt="No Image" src="/static/{{ image }}"/>
+                {% endfor %}
+                <h3>
+                    <a href="/generator/{{gen.generator_id}}">{{gen.title}}</a>
+                </h3>
+                <div class="sum-d">
+                    <strong class="action-f">Favorite in {{gen.categories}}</strong>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+
+            {% if user_gens %}
+            <div class="tab">
+                <h3>Generators</h3>
+            </div>
+
+            {% for gen in user_gens %}
+            <div id="fave-3602019" class="sum sum-n">
+                {% for image in gen.fimages|slice:":1"  %}
+                <img alt="No Image" src="/static/{{ image }}"/>
+                {% endfor %}
+                <h3>
+                    <a href="/generator/{{gen.generator_id}}">{{gen.title}}</a>
+                </h3>
+                <a class="desc" href="/generator/{{ gen.generator_id }}">{{ gen.description }}</a>
+                <br>
+                {{ gen.num_downloads }} downloads
+
+            </div>
+            {% endfor %}
+
+            <a class="foot-more" href="/user/{{username}}/generators">View All Generators</a>
+            {% endif %}
+        </div>
+
+
+
+    </div>
+</div>
+{% endblock content %}

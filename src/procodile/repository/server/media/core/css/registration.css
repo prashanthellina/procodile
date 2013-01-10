@@ -1,0 +1,579 @@
+.reg-form {
+    padding: 10px;
+}
+
+.form-register {
+    width: 450px;
+    float: left;
+}
+
+.reg-section {
+    border-top: 1px solid #ccc;
+    margin-top: 1em;
+    padding-top: 10px;
+}
+
+.reg-section .dialog-login,
+.reg-section .form-row,
+.reg-section .form-submit {
+    padding-left: 30px;
+    position: relative;
+}
+
+.reg-section .form-agree {
+    display: block;
+    font-weight: bold;
+    font-size: 85%;
+    padding: 30px 0 1em 0;
+}
+
+.reg-form .reg-section h4, .reg-form .reg-section p, .reg-section .button-login-digg {
+    display: none;
+}
+
+.register-info, .info-container {
+    border: 1px solid #dfdbd2;
+    background: #f4f1e9;
+    padding: 20px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.register-info {
+    margin-left: 480px;
+}
+
+.register-info h3,
+.register-info .side-container,
+.register-info #topten-list,
+.register-info .side-container,
+.register-info .side-container * {
+    clear: none;
+}
+
+.register-info .news-summary,
+.register-info .news-summary h3 a {
+    width: 80%;
+    border: none;
+    line-height: 1.3;
+}
+
+.register-info .img-thumb h3 span,
+.register-info .vid-thumb h3 span,
+.register-info .news-thumb h3 span {
+    position: absolute;
+    left: 40px;
+    top: 4px;
+    padding: 1px;
+    background: url(/img/ids.gif);
+    border: 1px solid #a5c2e3;
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
+}
+
+.register-info .img-thumb h3 span {
+    background: url(/img/ids.gif);
+}
+
+.register-info .vid-thumb h3 span,
+.register-info .news-thumb h3 span {
+    background: url(/img/vds.gif);
+}
+
+.register-info .img-thumb h3 em,
+.register-info .vid-thumb h3 em,
+.register-info .news-thumb h3 em {    
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-indent: -2000em;
+}
+
+.reg-section .form-row label {
+    display: block;
+    font-weight: bold;
+    font-size: 85%;
+    margin-top: 0.9em;
+}
+
+.reg-section .form-note {
+    position: absolute;
+    right: 0;
+    top: 18px;
+    width: 195px;
+    font-size: 85%;
+}
+
+.reg-section .form-error {
+    width: 175px;
+}
+
+.reg-section .dialog-captcha img {
+    margin: 5px 100px 0 0;
+    position: relative !important; 
+    left: 0;
+    top: 0;
+}
+
+.reg-section input#captcha {
+    width: 150px;
+    min-width: 1px;
+}
+
+.reg-section #audiocaptchalink {
+    display: block;
+    font-size: 85%;
+}
+
+.check-email {
+    padding: 20px 0 20px 210px;
+    background: url(/img/check-email.gif) no-repeat 10px 50%;
+}
+
+.check-email h3 {
+    padding-top: 20px;
+    margin-top: 25px;
+    border-top: 1px solid #ddd;
+    color: #666;
+}
+
+.check-email .reg-secondary {
+    color: #666;
+}
+
+.check-email li {
+    margin: 0.5em 0;
+}
+
+.reg-options {
+    padding: 15px;
+}
+
+.reg-options h2, .reg-options p {
+    margin-left: 80px;
+}
+
+.reg-options {
+    background: url(/img/confirm-check.gif) 25px 20px no-repeat;
+}
+
+.reg-options div {
+    padding-top: 15px;
+}
+
+.reg-options div a {
+    margin: 0 0 15px 0;
+    padding: 20px 20px 20px 80px;
+    display: block;
+    width: 400px;
+    border: 1px solid #9fc2eb;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #666;
+    background: url(/img/reg-options.gif) 14px 20px no-repeat;    
+}
+
+.reg-options div a.reg-profile {
+    background-position: 14px -190px;
+}
+
+.reg-options div a.reg-custom {
+    background-position: 14px -390px;
+}
+
+.reg-options div a.reg-digg {
+    background-position: 14px -610px;
+}
+
+.reg-options div a:hover {
+    color: #333;
+    border-color: #105CB6;
+}
+
+.reg-options div a strong {
+    display: block;
+    color: #105CB6;
+    font-size: 115%;
+}
+
+.dialog-tray span {
+    font-size: 85%;
+    font-weight: bold;
+    display: block;
+    padding-bottom: 0.5em;
+}
+
+.dialog-tray {
+    padding-left: 30px;
+}
+
+.register-why, .register-why li {
+    margin: 0;
+    list-style: none;
+    padding: 0 0 2em 0;
+}
+
+.register-why li {
+    padding: 10px 0 10px 45px;
+    background: url(/img/register-reasons.gif) 0 -598px no-repeat;
+}
+
+.register-why .why-friends { background-position: 0 2px; }
+.register-why .why-re { background-position: 0 -98px; }
+.register-why .why-submit { background-position: 0 -198px; }
+.register-why .why-custom { background-position: 0 -298px; }
+.register-why .why-comment { background-position: 0 -398px; }
+.register-why .why-digg { background-position: 0 -498px; }
+
+.reg-almost {
+	background: #FFF url(/img/digg-dude-fbc.gif) no-repeat scroll 510px 10px;
+	margin-top: 100px;
+	width: 600px;
+	margin: 30px auto 0;
+	padding:10px 15px 15px;
+	text-align: left;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+.reg-almost .main {
+	margin: 0;
+}
+
+.reg-almost div.top {
+	height: 40px;
+	background: #fff url(/img/submit-wait-top.gif) top left no-repeat;
+	color: #fff;
+}
+
+.reg-almost div.bottom {
+	background-color: #fff; 
+	padding: 30px 0; 	
+	background: #fff url(/img/submit-wait-bottom.gif) bottom left no-repeat;
+}
+
+#almostThereForm input#username {
+	position: relative;
+	left: 235px;
+	top: -1.75em;
+}
+
+#almostThereForm input.follow {
+	float: right;
+	position: relative;
+	right: 345px;
+	top: -2em;
+}
+
+#almostThereForm input#newsletter, #almostThereForm input#sync {
+	float: right;
+	position: relative;
+	right: 345px;
+	top: -0.5em;
+}
+
+#almostThereSubmit {margin-left: 235px;}
+
+.reg-almost .main h3 {
+	border-top: #eee 1px solid;
+}
+
+.reg-almost .warning, .reg-almost .warning h3, .reg-almost .main .username-recs h3 {
+	border: none;
+}
+
+.reg-almost .warning ul {
+	font-weight:bold;
+	list-style:none;
+	margin-bottom:0;
+	padding-left:0;
+}
+
+.reg-almost .form-note,
+.reg-almost .form-error {
+    position: absolute;
+    left: 235px;
+    top: 0.2em;
+    width: 300px;
+    font-size: 85%;
+}
+
+.reg-almost .form-note {color: #777;}
+
+.reg-convert {
+    padding: 15px;
+}
+
+.reg-almost input {
+	font-size: 115%;
+}
+
+.reg-almost label span,
+.reg-convert label span {
+    font-weight: normal;
+    color: #999;
+}
+
+.reg-almost h3,
+.reg-convert h3 {
+    font-size: 83%;
+    font-weight: bold;
+    padding: 12px 0 0 0;
+    margin-top: 10px;
+    margin-bottom: 0; 
+}
+
+.reg-almost h3 span {
+	display: block;
+	padding-top: 0.2em;
+}
+
+.reg-almost h4,
+.reg-convert h4 {
+    color: #555;
+    margin: 0;
+    font-weight: normal;
+}
+
+.friend-select a.deselect {
+    float: right;
+    display: block;
+    font-size: 85%;
+    padding: 8px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.friend-select div.friend-select-box {
+    clear: left;
+    overflow: auto;
+    height: 200px;
+    border: 1px solid #ddd;
+    padding: 12px 10px;
+    margin-left: 25px;
+    background: #f6f6f6;
+}
+
+.friend-select div.friend-select-box a {
+    display: block;
+    float: left;
+    padding: 16px 4px 4px 64px;
+    border: 1px solid #549fc2;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    width: 115px;
+    margin: 0 0 4px 4px;
+    text-decoration: none;
+    position: relative;
+    height: 42px;
+    white-space: nowrap;
+    overflow: hidden;
+    background: #fff url(/img/friend-selected.gif) 100% 100% no-repeat;
+    font-size: 85%;
+    font-weight: bold;
+}
+
+.friend-select div.friend-select-box a:hover,
+.friend-select div.friend-select-box a.deselected:hover {
+    border-color: #000;
+}
+
+.friend-select div.friend-select-box a img {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    padding: 2px;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.friend-select div.friend-select-box a span {
+    display: block;
+    color: #549fc2;
+    font-weight: normal;
+}
+
+.friend-select div.friend-select-box a.deselected,
+.friend-select div.friend-select-box a.deselected span  {
+    border-color: #ccc;
+    color: #666;
+    opacity: 0.7;
+    background: none;
+}
+
+.reg-almost p,
+.reg-convert p {
+    font-size: 85%;
+    font-weight: bold;
+}
+
+.reg-import {
+	min-height: 75px;
+    padding-left: 70px;
+    position: relative;
+    top: 0.5em;
+    left: 7px;
+}
+
+.reg-import img {
+    padding: 4px;
+    border: 1px solid #dfdbd2;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.reg-import img.import-hidden {
+    background: #aaa;
+    opacity: 0.7;
+    -moz-opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+.reg-import .import-hidden {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.reg-import li {
+    margin-top: 0.7em;
+}
+
+.special-info {
+    margin: 0 0 1em 0; 
+    border: 1px solid #ddd; 
+    background: #eee; 
+    padding: 10px; 
+    font-size: 85%; 
+    color: #666; -webkit-border-radius: 4px; -moz-border-radius: 4px;
+}
+
+.alt-login {
+	margin-top: -1em;
+    width: 200px;
+}
+
+.alt-login a {
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	background:#E0EBFF none repeat scroll 0 0;
+	font-size:85%;
+	padding: 3px 6px;
+	text-decoration:none;
+}
+
+#username-recs {
+    display:none;
+    margin-top: 10px;
+}
+
+#username-recs ul {
+	margin: 6px 0 0 0;
+	padding: 0;
+}
+
+#username-recs ul li {
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    cursor: pointer;
+    display: inline;
+	background:#E0EbFF none repeat scroll 0 0;
+	color:#105CB6;
+	font-size: 85%;
+	margin-right:6px;
+	padding:3px 6px;
+}
+
+#optional-form div.form-row {
+    margin: 14px 0;
+}
+
+#optional-form label {
+    font-weight: bold;
+    display: block;
+    float: left;
+    padding: 2px 0 0 7px;
+    width: 110px;
+}
+
+#optional-form .form-note {
+    position: absolute;
+    left: 30em;
+    top: -2px;
+    font-size: 85%;
+}
+
+#optional-form .form-foot {
+    padding-left: 127px;
+}
+
+form.forgot {
+    display: block;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    margin-top: 30px;
+}
+
+.side-container .digg-count a, .side-container .digg-count-s a {
+    transparent url(/img/shade-com.png) no-repeat scroll 0 0 !important
+}
+
+.reg-done {
+    padding: 10px 0 25px 110px;
+    border-bottom: 1px solid #bbb;
+    background: url(/img/reg-confirm.gif) no-repeat;
+}
+
+.reg-add {
+    padding: 25px 0 0 110px;
+    background: url(/img/reg-add.gif) 0 10px no-repeat;
+}
+
+.reg-add .form-text {
+    width: 20em;
+}
+
+.reg-accept {
+    padding-top: 3px;
+    margin-top: 3px;
+}
+
+#facebook-email-disclaimer,
+#facebook-friends-disclaimer {
+    display: none;
+    font-size: 85%;
+    padding: 15px;
+    border: 1px solid #aaa;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    margin: 1em 0;
+    color: #666;
+    background: #eee;
+}
+
+.form-why {
+    background: none;
+    margin-left: 0.5em;
+    padding-left: 0.5em;
+    border-left: 1px solid #ccc;
+}
+
+.facebook {
+    width: 20em;
+}
+
+.warning {
+    padding-right: 3em;
+}

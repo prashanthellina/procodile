@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package title="builiding" version="1">
+    <description/>
+    <generators>
+        <generator id="door.Generator">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="width" value="(1, 3)"/>
+                <param name="thickness" value="(0.10000000000000001, 0.29999999999999999)"/>
+                <param name="height" value="(2, 5)"/>
+            </config>
+        </generator>
+        <generator id="flat.Generator">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="length" value="(10, 100)"/>
+                <param name="width" value="(10, 100)"/>
+                <param name="height" value="(3, 5)"/>
+                <param name="inner_wall_thickness" value="(0.10000000000000001, 0.29999999999999999)"/>
+                <param name="outer_wall_thickness" value="(0.20000000000000001, 0.40000000000000002)"/>
+                <param name="corridor_length" value="(6, 8)"/>
+                <param name="corridor_width" value="(6, 8)"/>
+                <param name="door_width" value="1"/>
+                <param name="door_height" value="2"/>
+                <param name="main_door_width" value="(1, 2)"/>
+                <param name="main_door_height" value="(2, 3)"/>
+                <param name="main_door_wall" value="None"/>
+                <param name="main_door_position" value="None"/>
+            </config>
+        </generator>
+        <generator id="level.Generator">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="length" value="(10, 100)"/>
+                <param name="width" value="(10, 100)"/>
+                <param name="height" value="(3, 5)"/>
+                <param name="inner_wall_thickness" value="(0.10000000000000001, 0.29999999999999999)"/>
+                <param name="outer_wall_thickness" value="(0.20000000000000001, 0.40000000000000002)"/>
+                <param name="corridor_length" value="(2, 3)"/>
+                <param name="corridor_width" value="(2, 3)"/>
+                <param name="door_width" value="1"/>
+                <param name="door_height" value="2"/>
+            </config>
+            <sub_generator id="flat.Generator"/>
+            <sub_generator id="door.Generator"/>
+        </generator>
+        <generator id="building.Generator">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="length" value="(20, 40)"/>
+                <param name="width" value="(20, 40)"/>
+                <param name="num_levels" value="(1, 1)"/>
+                <param name="height" value="(10, 500)"/>
+                <param name="slab_height" value="(0.10000000000000001, 0.29999999999999999)"/>
+                <param name="level_height" value="(3, 5)"/>
+                <param name="corridor_length" value="(4, 6)"/>
+                <param name="corridor_width" value="(4, 6)"/>
+                <param name="wall_thickness" value="(0.10000000000000001, 0.29999999999999999)"/>
+            </config>
+            <sub_generator id="level.Generator"/>
+        </generator>
+    </generators>
+</package>

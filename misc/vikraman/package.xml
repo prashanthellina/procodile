@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package title="vikraman" version="None">
+    <description/>
+    <generators>
+        <generator id="bus.Wheelset">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="wheel_radius" value="(2, 2)"/>
+                <param name="height" value="(2, 2)"/>
+            </config>
+        </generator>
+        <generator id="bus.Bus">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="length" value="(20, 20)"/>
+                <param name="width" value="(4.25, 4.25)"/>
+                <param name="height" value="(5, 5)"/>
+                <param name="wheel_base" value="(12.5, 12.5)"/>
+                <param name="front_overhang" value="(3.5, 3.5)"/>
+                <param name="rear_overhang" value="(4.0, 4.0)"/>
+                <param name="wheel_radius" value="(2, 2)"/>
+            </config>
+            <sub_generator id="bus.Wheelset"/>
+        </generator>
+    </generators>
+</package>

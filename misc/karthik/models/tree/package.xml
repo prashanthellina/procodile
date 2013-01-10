@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package title="tree" version="8.0">
+    <description/>
+    <generators>
+        <generator id="normal.Tree">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="height" value="(0.5, 5)"/>
+                <param name="diameter" value="(0.050000000000000003, 0.5)"/>
+            </config>
+        </generator>
+        <generator id="tree.Tree">
+            <title>title of generator</title>
+            <description>description of generator</description>
+            <config>
+                <param name="height" value="(0.10000000000000001, 5)"/>
+                <param name="diameter" value="(0.050000000000000003, 0.5)"/>
+                <param name="branches" value="(10, 20)"/>
+                <param name="depth" value="4"/>
+            </config>
+            <sub_generator id="tree.Tree"/>
+        </generator>
+    </generators>
+</package>
